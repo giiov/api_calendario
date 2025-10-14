@@ -1,6 +1,6 @@
 $(function () {
     //inicia o calendário
-    var calendário = $('#calendar').calendario({
+    var $calendario = $('#calendar').calendario({
         weeks: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
         months: [
             'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
