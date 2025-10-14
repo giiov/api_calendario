@@ -34,7 +34,7 @@ fetch(url)
         const eventos = data.items || [];
         const eventosFormatados = {};
 
-        eventos.ForEach(evento => {
+        eventos.forEach(evento => {
             if (!evento.start) return;
 
             const dataInicio = new Date(evento.start.date || evento.start.dateTime);
@@ -55,7 +55,7 @@ fetch(url)
         console.log('Eventos formatados: ', eventosFormatados);
 
         //vai aplicar ao calendário
-        $calendário.setData(eventosFormatados);
+        $calendario.setData(eventosFormatados);
     })
     .catch(err => console.error('Erro ao buscar eventos: ', err));
 
