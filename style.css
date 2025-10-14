@@ -36,11 +36,11 @@ header h1 {
 	line-height: 38px;
 	margin: 0;
 	font-weight: 700;
-	color: #fff;
+	color: #800116;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 header h1 span {
-	color: #800116;
+	
 	font-size: 18px;
 	font-weight: 300;
 	display: block;
@@ -177,7 +177,7 @@ section, .main {
 	z-index: -2;
 }
 .custom-header {
-	background: #ef4f69;
+	background: #800116;
 	padding: 5px 10px 10px 20px;
 	height: 70px;
 	position: relative;
