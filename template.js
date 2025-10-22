@@ -9,8 +9,8 @@
     // the options
     $.Calendario.defaults = {
         weeks: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        weekabbrs: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        weekabbrs: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+        months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
         monthabbrs: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         displayWeekAbbr: false,
         displayMonthAbbr: false,
@@ -386,7 +386,7 @@ $(function () {
     function showEvents($contentEl, dateProperties) {
 
         hideEvents();
-        var $events = $('<div id="custom-content-reveal" class="custom-content-reveal"><h4>Events for ' + dateProperties.monthname + ' ' + dateProperties.day + ', ' + dateProperties.year + '</h4></div>'),
+        var $events = $('<div id="custom-content-reveal" class="custom-content-reveal"><h4>Eventos para ' + dateProperties.monthname + ' ' + dateProperties.day + ', ' + dateProperties.year + '</h4></div>'),
             $close = $('<span class="custom-content-close"></span>').on('click', hideEvents);
         $events.append($contentEl.html(), $close).insertAfter($wrapper);
         setTimeout(function () {

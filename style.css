@@ -46,7 +46,7 @@ body {
 
 
 
-	/*estilo do cabeçalho (titulo principal)*/
+/*estilo do cabeçalho (titulo principal)*/
 
 
 header {
@@ -126,6 +126,11 @@ section,
 	border-bottom: 1px solid #ddd;
 }
 
+.fc-calendar .fc-row>div.fc-content:hover {
+	box-shadow: inset 0 0 0 1px rgba(128, 1, 22, 0.06);
+	transform: translateY(-1px);
+}
+
 /*altura das linhas (quantidade de semanas visíveis)*/
 .fc-four-rows .fc-row {
 	height: 25%;
@@ -163,7 +168,8 @@ section,
 .fc-calendar .fc-row>div {
 	border-right: 1px solid #ddd;
 	padding: 4px;
-	overflow: hidden; /* corta o texto que passar*/
+	overflow: hidden;
+	/* corta o texto que passar*/
 	position: relative;
 }
 
@@ -177,7 +183,7 @@ section,
 	position: absolute;
 	width: 30px;
 	height: 20px;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 20px;
 	font-weight: 700;
 	color: #ddd;
@@ -256,7 +262,7 @@ section,
 	padding: 5px 10px 10px 20px;
 	height: 70px;
 	position: relative;
-	border-top: 5px solid #ef4f69;
+	border-top: 5px solid #c70021;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -322,7 +328,7 @@ section,
 }
 
 .custom-header nav span:hover:before {
-	color: #495468;
+	color: #c70021;
 }
 
 .custom-content-reveal {
@@ -349,7 +355,7 @@ section,
 	width: 20px;
 	height: 20px;
 	text-align: center;
-	background: #ef4f69;
+	background: #c70021;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	line-height: 13px;
@@ -378,7 +384,7 @@ section,
 	padding: 20px;
 	background: #fff;
 	border-bottom: 1px solid #ddd;
-	border-top: 5px solid #ef4f69;
+	border-top: 5px solid #c70021;
 	box-shadow: 0 1px rgba(255, 255, 255, 0.9);
 	margin-bottom: 30px;
 }
@@ -388,7 +394,7 @@ section,
 }
 
 .custom-content-reveal a {
-	color: #ef4f69;
+	color: #c70021;
 }
 
 .custom-content-reveal a:hover {
@@ -398,7 +404,7 @@ section,
 
 /* ajustes visuais do corpo dos dias */
 .fc-calendar-container {
-	height: 400px;
+	height: 500px;
 	/* << pode aumentar para deixar os quadrados maiores */
 	width: auto;
 	padding: 30px;
@@ -408,10 +414,10 @@ section,
 
 .fc-calendar .fc-head {
 	background: transparent;
-	color: #ef4f69;
+	color: #c70021;
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .fc-calendar .fc-row>div {
@@ -434,7 +440,7 @@ section,
 }
 
 .fc-calendar .fc-row>div.fc-today {
-	background: #ef4f69;
+	background: #c70021;
 	box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -448,6 +454,7 @@ section,
 	text-align: center;
 	width: 20px;
 	margin-left: -10px;
+	margin-bottom: 5px;
 	position: absolute;
 	color: #DDD;
 	font-size: 70px;
@@ -461,7 +468,7 @@ section,
 }
 
 .fc-calendar .fc-row>div.fc-content:hover:after {
-	color: #ef4f69;
+	color: #c70021;
 }
 
 .fc-calendar .fc-row>div.fc-today.fc-content:hover:after {
@@ -481,7 +488,7 @@ section,
 	}
 
 	.fc-calendar .fc-row>div>span.fc-date {
-		font-size: 15px;
+		font-size: 14px;
 	}
 }
 
@@ -495,7 +502,8 @@ section,
 
 .tem-evento .evento {
 	display: block !important;
-	font-size: 10px; /* << pode aumentar pra 14px */
+	font-size: 10px;
+	/* << pode aumentar pra 14px */
 	line-height: 1.4;
 	color: #333;
 	background: rgba(255, 255, 255, 0.8);
@@ -509,7 +517,8 @@ section,
 	/* coloca "..." se for longo */
 	white-space: normal;
 	/* mantém em uma linha */
-	max-height: 40%; /*altura máxima para 2-3 linhas de texto*/
+	max-height: 40%;
+	/*altura máxima para 2-3 linhas de texto*/
 
 }
 
@@ -519,7 +528,7 @@ section,
 	font-size: 14px !important;
 	font-weight: 700;
 	line-height: 1.2;
-	color:#800116;
+	color: #800116;
 
 	font-size: 5px !important;
 	font-weight: 200;
@@ -532,13 +541,14 @@ section,
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: white;
-	border: 2px solid #800116;
-	border-radius: 15px;
-	padding: 20px;
-	width: 300px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-	z-index: 9999;
+	z-index: 99999;
+	background: #fff;
+	border-radius: 12px;
+	padding: 18px;
+	width: 360px;
+	max-width: 92%;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	border: 3px solid #800116;
 }
 
 /* Botão de fechar */
@@ -553,5 +563,39 @@ section,
 }
 
 .evento {
-	font-size: 12px;
+	font-size: 17px;
+}
+
+/* Força máxima de conteúdo dentro da célula (garante corte) */
+.fc-calendar .fc-row>div>div {
+	display: block;
+	max-height: 3.6em;
+	/* ~2 linhas (ajusta conforme o tamanho da fonte) */
+	overflow: hidden;
+	position: relative;
+}
+
+/* Faz com que quebras longas não quebrem o layout */
+.fc-calendar .fc-row>div>div * {
+	white-space: normal;
+	word-break: break-word;
+}
+
+/* Se houver <small> ou descrição, escondemos via CSS (apenas visual) */
+.fc-calendar .fc-row>div>div small,
+.fc-calendar .fc-row>div>div .descricao {
+	display: none;
+}
+
+/*Titulo evento*/
+.fc-calendar .fc-row>div>div>*:first-child {
+	display: flex;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: 700;
+	color: #800116;
+	font-size: 10px;
+	margin-top: 2px;
 }
